@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+# Blood Request Section
+--------------------------------------------------------------*/
+.blood-request .content {
+    padding: 15px;
+    background: #111111;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#requestTable i {
+    color: #ff0000;
+    font-size: 1.1em;
+}
+
+#usersTable i {
+    color: #ff0000;
+    font-size: 1.1em;
+}

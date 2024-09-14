@@ -1,0 +1,96 @@
+footer {
+    background: #111111;
+    padding: 20px 50px;
+    color: #ea062b;
+    background-image: url("../../assets/img/footer-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    background-blend-mode: overlay;
+}
+
+footer li {
+    line-height: 1.5;
+}
+
+footer h5,
+footer p,
+footer a {
+    font-size: 0.9em;
+    color: white
+}
+
+footer ul {
+    list-style: none;
+}
+
+
+.fa-solid {
+    font-size: .5em;
+    margin-right: 5px;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.fp-news h6 {
+    font-size: 0.9em;
+    /* flex-shrink: 1; */
+}
+
+.fp-news p {
+    font-size: 0.75em;
+    color: #ea062b;
+
+}
+
+hr.hr-text {
+    position: relative;
+    border: none;
+    height: 1px;
+    background: #999;
+}
+
+hr.hr-text::before {
+    content: attr(data-content);
+    display: block;
+    background: #fff;
+    font-weight: bold;
+    font-size: 0.85em;
+    color: #f00;
+    border-radius: 25em;
+    padding: 0.5em 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* line-height: 40px; */
+}
+
+.social i {
+    margin-right: 10px;
+}
+
+.terms span:not(:last-child)::after {
+    color: white;
+    content: "|";
+    font-size: 0.75em;
+    padding-left: 7px;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.copyright>div {
+    padding: 20px 0;
+}
+
+.copyright p {
+    font-size: 0.75em;
+    color: #ea062b;
+    text-align: center;
+}

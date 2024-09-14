@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JeevanRaksha</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Icon Vendor CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Other Vendor CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <!-- ======= Navigation / Header Section ======= -->
+    <header id="header" class="fixed-top"> </header>
+
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="form-group col-6">
+                <label for="filterGender">Gender</label>
+                <select id="filterGender" class="form-control" onchange="filterTable()">
+                    <option value="">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group col-6">
+                <label for="filterBloodGroup">Blood Group</label>
+                <select id="filterBloodGroup" class="form-control" onchange="filterTable()">
+                    <option value="">All</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mt-5">
+        <table class="table" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <!-- <th scope="col">City</th> -->
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Blood Group</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated from the API -->
+            </tbody>
+        </table>
+
+        <div id="modals"></div>
+
+        <nav>
+            <ul class="pagination" id="pagination">
+                <!-- Pagination buttons will be added here -->
+            </ul>
+        </nav>
+    </div>
+
+    <footer id="footer">
+        <!-- Footer Top Section  -->
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <h5>About Us</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt suscipit natus
+                    exercitationem
+                    nesciunt nemo maxime voluptatem qui, error inventore cumque vero, adipisci iure corporis.
+                    Exercitationem ullam dolorem perspiciatis facilis!</p>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <h5>Quick Links</h5>
+                <ul class="list-group">
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">About Us</a></span>
+                    </li>
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Campaigns</a></span>
+                    </li>
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Latest
+                                News</a></span>
+                    </li>
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Contact</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2">
+                <h5>Our Services</h5>
+                <ul class="list-group">
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Blood
+                                Donation</a></span>
+                    </li>
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Health
+                                Check</a></span>
+                    </li>
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Blood
+                                Banks</a></span>
+                    </li>
+                    <li><span><i class="fa-solid fa-angles-right"></i></span><span><a href="#">Donation
+                                Process</a></span></li>
+                </ul>
+
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <h5>Latest News</h5>
+                <div class="row mb-1">
+                    <div class="col-3 fp-news"><img src="https://placehold.co/75" alt=""></div>
+                    <div class="col fp-news">
+                        <a href="#">
+                            <h6>Lorem ipsum dolor sit amet</h6>
+                        </a>
+                        <p>April 25, 2024</p>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-3 fp-news"><img src="https://placehold.co/75" alt=""></div>
+                    <div class="col fp-news">
+                        <a href="#">
+                            <h6>Lorem ipsum dolor sit amet</h6>
+                        </a>
+                        <p>April 25, 2024</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="my-5">
+            <hr data-content="MORE" class="hr-text">
+        </div>
+
+        <!-- Footer Bottom Section  -->
+        <div class="row">
+            <div class="col-12 col-sm-5">
+                <form class="row row-cols-lg-auto g-3 align-items-center">
+                    <div class="col-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="emailAddress"
+                                placeholder="Enter Your Email Address">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn"
+                            style="background-color: red; color: white;">Subscribe</button>
+                    </div>
+                </form>
+                <p>Subscribe for upcoming news and updates</p>
+
+            </div>
+            <div class="col-12 col-sm-7">
+                <div class="social" style="text-align: right;">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </div>
+
+                <div class="terms" style="text-align: right;">
+                    <span><a href="#">Privacy Policy</a></span>
+                    <span><a href="#">Terms & Condition</a></span>
+                    <span><a href="#">FAQ</a></span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright Section  -->
+        <div class="row copyright mt-3">
+            <div class="col-12">
+                <p>Copyright &copy; 2024 | All right reserved by <strong> <a>Lakshya</a></strong> </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Replace with your own API key -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZUoURx-dCX5675lGu_tO5AfpzKx9i_Ao&loading=async&libraries=places"
+        type="text/javascript"></script>
+
+    <!-- Custom Javascript -->
+    <script src="script.js"></script>
+    <script src="./assets/js/donors.js"></script>
+
+</body>
+
+</html>
